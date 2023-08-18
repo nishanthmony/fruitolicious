@@ -1,5 +1,6 @@
 import {useState} from 'react'
 import './App.css';
+import Preloader from './component/preloader';
 
 function App() {
   const [text, count] = useState(0)
@@ -12,7 +13,13 @@ function App() {
 
   return (
     <div className="App">
-      <h1>FRUIT - O - LICIOUS</h1>
+
+      <>
+      <Preloader/>
+      <div>
+        <h1>FRUIT - O - LICIOUS</h1>
+      </div>
+      </>
       <button onClick={incval} className='incButton'>+</button>
       <h2>{text}</h2>
       <button onClick={decval} className='decButton'>-</button>
