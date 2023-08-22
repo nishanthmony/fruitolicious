@@ -1,7 +1,6 @@
-.apptitle{
-    align-items: center;
+.shoptitle{
     display: flex;
-    margin-right: 50px;
+    align-items: center;
 }
 .navbar{
     width: 100%;
@@ -9,8 +8,6 @@
     background-color: rgb(19, 19, 19);
     display: flex;
     justify-content: flex-end;
-    align-items: center;
-    
 }
 
 .links{

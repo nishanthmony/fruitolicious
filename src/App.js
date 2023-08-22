@@ -1,29 +1,21 @@
-import {useState} from 'react'
 import './App.css';
 import { Navbar } from './component/navbar'
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom' 
+import {Cart} from './pages/cart/cart.jsx'
+import {Shop} from './pages/shop/shop.jsx'
 
 function App() {
-  const [text, count] = useState(0)
-  const incval=() => {
-    count(text+1)
-  }
-  const decval = () => {
-    count(text-1)
-  }
+  
 
   return (
     <div className="App">
       <Router>
         <Navbar />
         <Routes>
-          <Route path = "/"/>
-          <Route path = "/cart"/>
+          <Route path = "/" element = {< Shop/>}/>
+          <Route path = "/cart" element = {< Cart/>}/>
         </Routes>
       </Router>
-      <button onClick={incval} className='incButton'>+</button>
-      <h2>{text}</h2>
-      <button onClick={decval} className='decButton'>-</button>
     </div>
   );
 }

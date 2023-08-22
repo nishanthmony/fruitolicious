@@ -5,11 +5,8 @@
 }
 
 button{
-  height: 100px;
-  width: 100px;
   background-color: greenyellow;
   border-radius: 60px;
-  font-size: 70px;
 }
 
 h2{
