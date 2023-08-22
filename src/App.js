@@ -1,6 +1,7 @@
 import {useState} from 'react'
 import './App.css';
-import Preloader from './component/preloader';
+import { Navbar } from './component/navbar'
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom' 
 
 function App() {
   const [text, count] = useState(0)
@@ -13,13 +14,13 @@ function App() {
 
   return (
     <div className="App">
-
-      <>
-      <Preloader/>
-      <div>
-        <h1>FRUIT - O - LICIOUS</h1>
-      </div>
-      </>
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path = "/"/>
+          <Route path = "/cart"/>
+        </Routes>
+      </Router>
       <button onClick={incval} className='incButton'>+</button>
       <h2>{text}</h2>
       <button onClick={decval} className='decButton'>-</button>
