@@ -3,6 +3,7 @@ import {ShopContext} from '../../context/shop-context'
 
 export const Product = (props) => {
     const { prodId, prodName, prodPrice, prodImg } = props.data;
+    // eslint-disable-next-line
     const {addToCart, cartItems} = useContext(ShopContext);
   return (
     <div className='product'>
