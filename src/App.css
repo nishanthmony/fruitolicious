@@ -13,11 +13,6 @@ h2{
   color: gold;
 }
 
-h1{
-  color: green;
-  text-align: center;
-}
-
 .incButton:hover{
   background-color: green;
 }

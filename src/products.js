@@ -76,5 +76,5 @@ export const PRODUCTS = [
         prodName : "LEMON",
         prodPrice : 40,
         prodImg : "https://i.postimg.cc/VNc3bhwg/LEMON.jpg"
-    }
+    },
 ];

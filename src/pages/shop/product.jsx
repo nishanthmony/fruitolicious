@@ -2,9 +2,11 @@ import React, { useContext } from 'react'
 import {ShopContext} from '../../context/shop-context'
 
 export const Product = (props) => {
-    const { prodId, prodName, prodPrice, prodImg } = props.data;
-    // eslint-disable-next-line
+    const { id, prodName, prodPrice, prodImg } = props.data;
     const {addToCart, cartItems} = useContext(ShopContext);
+
+
+    const cartItemAmount = cartItems[id]
   return (
     <div className='product'>
         <img src={prodImg} alt=''/>
@@ -12,8 +14,8 @@ export const Product = (props) => {
             <p><b>{prodName}</b></p>
             <p>₹ {prodPrice}</p>
         </div>
-        <button className='addtocartbutton' onClick={() => addToCart(prodId)}>
-          Add To Cart {}
+        <button className='addtocartbutton' onClick={() => addToCart(id)}>
+          Add To Cart {cartItemAmount > 0 && <> ({cartItemAmount}) </>}
         </button>
 {/*
         <button onClick={incval} className='incButton'>+</button>
@@ -21,5 +23,8 @@ export const Product = (props) => {
         <button onClick={decval} className='decButton'>-</button>
 */}
     </div>
-  )
-}
+  );
+};
+
+
+// eslint-disable-next-line= it is used to remove warnings on unused variables on the next line

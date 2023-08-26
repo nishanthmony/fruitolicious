@@ -1,16 +1,37 @@
-.shoptitle{
-    display: flex;
-    align-items: center;
-}
 .navbar{
     width: 100%;
     height: 80px;
     background-color: rgb(19, 19, 19);
-    display: flex;
-    justify-content: flex-end;
+    position: relative;
+    overflow: hidden;
 }
 
+.navbar a{
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.navbar a.active{
+    background-color: #04AA6D;
+    color: white;
+}
+
+.appTitle{
+    float: none;
+    position: absolute;
+    color: green;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
 .links{
+    float: right;
     margin-right: 50px;
     display: flex;
     align-items: center;
@@ -19,6 +40,6 @@
 .links a{
     color: white;
     text-decoration: none;
-    margin-left: 20px;
-    font-size: 25px;
+    margin-left: 50px;
+    font-size: 35px;
 }
