@@ -17,11 +17,7 @@ export const Product = (props) => {
         <button className='addtocartbutton' onClick={() => addToCart(id)}>
           Add To Cart {cartItemAmount > 0 && <> ({cartItemAmount}) </>}
         </button>
-{/*
-        <button onClick={incval} className='incButton'>+</button>
-        <h2>{text}</h2>
-        <button onClick={decval} className='decButton'>-</button>
-*/}
+
     </div>
   );
 };
