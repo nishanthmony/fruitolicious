@@ -22,6 +22,7 @@
 
 .appTitle{
     float: none;
+    object-fit: scale-down;
     position: absolute;
     color: green;
     top: 50%;
@@ -42,4 +43,35 @@
     text-decoration: none;
     margin-left: 50px;
     font-size: 35px;
+}
+
+@media(min-width:50px), (max-width:155px){
+    .links{
+        display: none;
+    }
+    .appTitle{
+        font-size: xx-small;
+    }
+}
+@media(min-width:350px){
+    .appTitle{
+        font-size: medium;
+    }
+}
+@media(min-width:650px){
+    .appTitle{
+        font-size: medium;
+    }
+    .links{
+        display: flex;
+    }
+}
+
+@media(min-width:1050px){
+    .appTitle{
+        font-size: xx-large;
+    }
+    .links{
+        display: flex;
+    }
 }
